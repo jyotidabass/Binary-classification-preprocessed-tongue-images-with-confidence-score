@@ -12,7 +12,7 @@
       <form>
          <input type="file" id="file"  onchange="detectImage()">  
       </form>
-      <script src="sketch.python"> 
+      <script src="sketch.js"> 
       </script>
    </body>
 </html>
