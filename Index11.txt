@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Image Classification Example</title>
+      <script src="https://colab.research.google.com/github/jyotidabass/Binary-classification-preprocessed-tongue-images-with-confidence-score/blob/main/Binary_classification_preprocessed_tongue_images_with_confidence_score.ipynb" type="text/pythonscript"></script>
+   </head>
+   <body>
+      <h1>Image classification using Deep learning based model</h1>
+      <p>The Classification model labeled this as <span id="result">...</span> with a confidence of <span id="probability">...</span>.</p>
+      <img src="" id="output_image" width="400" height="400" accept="image/*" crossorigin="anonymous" alt="Upload image">
+      <form>
+         <input type="file" id="file"  onchange="detectImage()">  
+      </form>
+      <script src="sketch.python"> 
+      </script>
+   </body>
+</html>
