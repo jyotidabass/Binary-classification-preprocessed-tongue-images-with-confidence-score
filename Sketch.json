@@ -1,0 +1,25 @@
+let classifier;
+let labels = ['Coated tongue','Non-coated tongue'];
+preLoad();
+// Initialize the Image Classifier method with your // Custom  model
+function preLoad() {
+classifier = ml5.imageClassifier('https://colab.research.google.com/github/jyotidabass/Binary-classification-preprocessed-tongue-images-with-confidence-score/blob/main/Binary_classification_preprocessed_tongue_images_with_confidence_score.ipynb', modelLoaded);
+}
+function modelLoaded() {
+console.log('Model Loaded!');
+}
+// predict the result after uploaded
+function detectImage() {
+var reader = new FileReader();
+reader.onload = function () {
+var output = document.getElementById('output_image');
+output.src = reader.result;
+classifier.classify(document.getElementById('output_image'), getResult);
+}
+reader.readAsDataURL(event.target.files[0]);
+}
+// result callback function
+function getResult(err, results) {
+alert(JSON.stringify(results));
+        alert("Predicted is :", labels[results[0].label]);
+}
